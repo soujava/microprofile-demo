@@ -9,3 +9,8 @@ To run:
 
 * `mvn clean package tomee:exec -DskipTests`
 * `java -jar target/microprofile-demo-1.0-SNAPSHOT-exec.jar`
+
+
+### More information
+
+* http://microprofile.io/
