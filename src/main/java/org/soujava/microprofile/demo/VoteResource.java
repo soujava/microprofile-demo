@@ -9,7 +9,6 @@ import java.util.Map;
 
 @ApplicationScoped
 @Path("votes")
-@Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class VoteResource {
 
@@ -24,9 +23,15 @@ public class VoteResource {
     }
 
     @POST
-    @Path("/{opinion}")
-    public void vote(@PathParam("opinion") String opinion) {
-        voteCounter.vote(opinion);
+    @Path("/yes")
+    public void voteYes() {
+        voteCounter.voteYes();
+    }
+
+    @POST
+    @Path("/no")
+    public void voteNo() {
+        voteCounter.voteNo();
     }
 
     @GET

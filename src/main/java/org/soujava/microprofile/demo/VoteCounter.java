@@ -16,21 +16,14 @@ public class VoteCounter {
     private final AtomicInteger no = new AtomicInteger();
 
 
-    public void vote(String vote) {
-        if (YES.equals(vote)) {
-            voteYes();
-        } else {
-            voteNo();
-        }
-    }
 
 
-    private void voteYes() {
+    public void voteYes() {
         yes.incrementAndGet();
     }
 
 
-    private void voteNo() {
+    public void voteNo() {
         no.incrementAndGet();
     }
 
