@@ -12,9 +12,10 @@ To run:
 
 ### The available resources:
 
-* **GET** http://localhost:8080/microprofile-demo/resource/votes/
+* **GET** http://localhost:8080/microprofile-demo/resource/votes/ 
 * **GET** http://localhost:8080/microprofile-demo/resource/votes/question
-* **POST** http://localhost:8080/microprofile-demo/resource/votes/{opinion} yes|no
+* **POST** http://localhost:8080/microprofile-demo/resource/votes/no
+* **POST** http://localhost:8080/microprofile-demo/resource/votes/yes
 
 ## More information
 
