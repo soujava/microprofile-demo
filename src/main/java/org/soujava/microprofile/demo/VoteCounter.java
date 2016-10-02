@@ -9,14 +9,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 @ApplicationScoped
 public class VoteCounter {
 
-    private static final String YES = "yes";
-
     private final AtomicInteger yes = new AtomicInteger();
 
     private final AtomicInteger no = new AtomicInteger();
-
-
-
 
     public void voteYes() {
         yes.incrementAndGet();
@@ -29,7 +24,7 @@ public class VoteCounter {
 
     public Map<String, Integer> getResult() {
         Map<String, Integer> votes = new HashMap<>();
-        votes.put(YES, yes.get());
+        votes.put("yes", yes.get());
         votes.put("no", no.get());
         return votes;
     }
