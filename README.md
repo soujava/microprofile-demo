@@ -1,2 +1,0 @@
-# microprofile-demo
-Microprofile demo
