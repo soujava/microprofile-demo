@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @ApplicationScoped
-public class Vote {
+public class VoteCounter {
 
     private static final String YES = "yes";
 
@@ -18,19 +18,19 @@ public class Vote {
 
     public void vote(String vote) {
         if (YES.equals(vote)) {
-            yesVote();
+            voteYes();
         } else {
-            noVote();
+            voteNo();
         }
     }
 
 
-    private void yesVote() {
+    private void voteYes() {
         yes.incrementAndGet();
     }
 
 
-    private void noVote() {
+    private void voteNo() {
         no.incrementAndGet();
     }
 
@@ -44,7 +44,7 @@ public class Vote {
 
     @Override
     public String toString() {
-        return "Vote{" +
+        return "VoteCounter{" +
                 "yes=" + yes +
                 ", no=" + no +
                 '}';

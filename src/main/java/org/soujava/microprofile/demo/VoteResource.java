@@ -15,7 +15,7 @@ public class VoteResource {
 
 
     @Inject
-    private Vote vote;
+    private VoteCounter voteCounter;
 
     @GET
     @Path("question")
@@ -26,11 +26,11 @@ public class VoteResource {
     @POST
     @Path("/{opinion}")
     public void vote(@PathParam("opinion") String opinion) {
-        vote.vote(opinion);
+        voteCounter.vote(opinion);
     }
 
     @GET
     public Map<String, Integer> getResult() {
-        return vote.getResult();
+        return voteCounter.getResult();
     }
 }
